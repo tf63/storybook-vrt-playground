@@ -9,6 +9,27 @@
 - [ ] コミットハッシュベースの差分検出
 - [ ] ダークモード対応
 
+## あそびかた
+
+まえじゅんび
+
+```shell
+docker compose up -d
+pnpm install
+```
+
+VRT実行 (StorybookのビルドとPlaywrightテストの実行)
+
+```shell
+pnpm playwright
+```
+
+Playwrightレポート確認 (http://localhost:9323)
+
+```shell
+pnpm playwright:report
+```
+
 ## 懸念事項
 
 - 待機時間、AnimationがあるStoryはどうするか

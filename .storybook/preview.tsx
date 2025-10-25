@@ -4,6 +4,7 @@ import "../src/app/globals.css"
 
 const preview: Preview = {
 	parameters: {
+		layout: "fullscreen",
 		controls: {
 			matchers: {
 				color: /(background|color)$/i,
@@ -22,7 +23,7 @@ const preview: Preview = {
 		},
 	},
 	decorators: (Story) => (
-		<div className="flex items-center justify-center p-5">
+		<div className="w-full p-8 flex items-center justify-center">
 			<Story />
 		</div>
 	),

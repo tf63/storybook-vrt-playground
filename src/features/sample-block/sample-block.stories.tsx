@@ -7,7 +7,15 @@ export default {
 	title: "SampleBlock",
 	component: SampleBlock,
 	render: (props) => <SampleBlock {...props} />,
-	decorators: [(Story) => <Story />],
+	decorators: [
+		(Story) => (
+			<>
+				<div className="w-80">
+					<Story />
+				</div>
+			</>
+		),
+	],
 } satisfies Meta<SampleBlockType>
 
 export const Default: StoryObj<SampleBlockType> = {

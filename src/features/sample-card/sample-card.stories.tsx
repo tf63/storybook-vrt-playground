@@ -7,7 +7,13 @@ export default {
 	title: "SampleCard",
 	component: SampleCard,
 	render: (props) => <SampleCard {...props} />,
-	decorators: [(Story) => <Story />],
+	decorators: [
+		(Story) => (
+			<div className="w-80">
+				<Story />
+			</div>
+		),
+	],
 } satisfies Meta<SampleCardType>
 
 export const Default: StoryObj<SampleCardType> = {
