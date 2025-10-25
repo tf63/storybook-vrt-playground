@@ -1,0 +1,12 @@
+services:
+  playwright:
+    image: mcr.microsoft.com/playwright:v1.56.1
+    ports:
+      - "3010:3000"
+      - "9323:9323"
+    working_dir: /tests
+    stdin_open: true
+    volumes:
+      - .:/tests
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
