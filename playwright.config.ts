@@ -28,7 +28,7 @@ export default defineConfig({
 	],
 
 	use: {
-		baseURL: "http://host.docker.internal:6006",
+		baseURL: "http://localhost:6016",
 		screenshot: "only-on-failure", // スクリーンショット保存
 		trace: "on-first-retry", // トレース収集
 		video: "off", // 動画保存設定
@@ -73,9 +73,9 @@ export default defineConfig({
 		},
 	],
 
-	//   webServer: {
-	//     command: 'npx serve dist -l 3000',  // テスト前に起動するコマンド
-	//     port: 3000,
-	//     reuseExistingServer: !process.env.CI,
-	//   },
+	webServer: {
+		command: "npx serve tmp/storybook-static -l 6016", // テスト前に起動するコマンド
+		port: 6016,
+		// reuseExistingServer: !process.env.CI,
+	},
 })

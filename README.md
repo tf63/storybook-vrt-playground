@@ -1,5 +1,14 @@
 # Storybook with Playwright で VRT をやる
 
+## TODO
+
+- [x] VRT専用コンテナ化 (通常のPlaywrightコンテナと分ける想定)
+- [ ] Actions
+- [ ] ファイル分割
+- [ ] worker
+- [ ] コミットハッシュベースの差分検出
+- [ ] ダークモード対応
+
 ## 懸念事項
 
 - 待機時間、AnimationがあるStoryはどうするか
