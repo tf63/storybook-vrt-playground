@@ -1,11 +1,15 @@
 services:
   playwright:
-    image: mcr.microsoft.com/playwright:v1.56.1
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - "9323:9323"
-    working_dir: /tests
+      - "127.0.0.1:9323:9323"
+    working_dir: /work
     stdin_open: true
     volumes:
-      - .:/tests
+      - ./tmp:/work/tmp
+      - ./tests:/work/tests
+      - ./playwright.config.ts:/work/playwright.config.ts
     extra_hosts:
       - "host.docker.internal:host-gateway"
